@@ -1,6 +1,6 @@
 # Goodstain
 
-This is a simple script to generate *Goodstain sequences* as described in [this video](https://www.youtube.com/watch?v=oBOZ2WroiVY). It requires python3.
+This is a simple script to generate *Goodstain sequences* as described in [this video](https://www.youtube.com/watch?v=oBOZ2WroiVY).
 
 To run, navigate in the console to the folder containing the script and execute:
 
