@@ -1,11 +1,14 @@
-import sys
+#! /usr/bin/python
 import argparse
 
-
-
 class HereditaryBaseNumber:
-
+  """
+  A number represented in Hereditary base.
+  """
   def __init__(self, value, base):
+    """
+    Compute the HereditaryBase representation of value.
+    """
     self.base = base;
     
     if(value == 0):
@@ -23,6 +26,9 @@ class HereditaryBaseNumber:
       
       
   def val(self):
+    """
+    Return the integer value of this number.
+    """
     return sum([d*(self.base)**e.val() for d,e in self.components]);
       
   def _coeficient(self, d):
@@ -37,23 +43,26 @@ class HereditaryBaseNumber:
       return "%s^{%s}" %(b, str(e));
   
   def __str__(self):
+    """
+    Format the number as a latex expression.
+    """
     if(self.val() <= self.base):
       return str(self.val());
     return " + ".join(["%s%s" % (self._coeficient(d), self._term(self.base, e)) for (d, e) in self.components]);
     
       
   def increaseBase(self):
+    """
+    Reinterpret the number in a higher base.
+    """
     self.base +=1;
     for (_, e) in self.components:
       e.increaseBase();
   
     
-def goodstainNext(k):
-  pass
   
     
 if __name__ == "__main__":
-    
     parser = argparse.ArgumentParser(description='Generates a Goodstain sequence.')
     parser.add_argument('-s', type=int,  default=13, help="Starting number. (default: 13)")
     parser.add_argument('-n', type=int, default=10, help="Number of iterations to compute. (default: 10)");
