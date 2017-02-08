@@ -63,7 +63,7 @@ class HereditaryBaseNumber:
   
     
 if __name__ == "__main__":
-    parser = argparse.ArgumentParser(description='Generates a Goodstain sequence.')
+    parser = argparse.ArgumentParser(description='Generates a Goodstein sequence.')
     parser.add_argument('-s', type=int,  default=13, help="Starting number. (default: 13)")
     parser.add_argument('-n', type=int, default=10, help="Number of iterations to compute. (default: 10)");
     args = parser.parse_args();
