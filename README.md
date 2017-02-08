@@ -1,11 +1,11 @@
-# Goodstain
+# Goodstein
 
-This is a simple script to generate *Goodstain sequences* as described in [this video](https://www.youtube.com/watch?v=oBOZ2WroiVY).
+This is a simple script to generate *Goodstein sequences* as described in [this video](https://www.youtube.com/watch?v=oBOZ2WroiVY).
 
 To run, navigate in the console to the folder containing the script and execute:
 
 ```
-$ python goodstain.py
+$ python goodstein.py
 ```
 The output will be valid LaTeX code.
 ```
@@ -26,12 +26,12 @@ $$ 3138428381103 = 11^{11 + 1} + 3.11^{3} + 3.11^{2} + 2.11 + 4.1 $$
 For additional parameters run:
 
 ```
-$ python goodstain.py -h
+$ python goodstein.py -h
 ```
 ```
-usage: goodstain.py [-h] [-s S] [-n N]
+usage: goodstein.py [-h] [-s S] [-n N]
 
-Generates a Goodstain sequence.
+Generates a Goodstein sequence.
 
 optional arguments:
   -h, --help  show this help message and exit
